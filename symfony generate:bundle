@@ -1,0 +1,141 @@
+
+
+http://ziad.eljammal.com/intro-symfony-2-entities-doctrine/
+
+http://my.geek.nz/2011/12/18/symfony2-console-cheat-sheet/
+
+
+http://kanaslab.blogspot.in/2013/05/creating-forms-in-symfony2-part-i.html
+
+
+TO start new Entity 
+
+php app/console generate:bundle --namespace=Blogger/BlogBundle --format=yml
+
+Already Entity
+
+These are the process for creating the 'Model' / 'Entity'  
+
+  ubc@ubc-System-Product-Name:  cd /var/path/of/project/ 
+  ubc@ubc-System-Product-Name:  Project$ php app/console doctrine:generate:entity
+  
+     // Welcome to the Doctrine2 entity generator        /* this type of  message is display */
+     
+     after that 
+     
+     
+     The Entity shortcut name: TestTestBundle:Enquiry       // put the Bundel name like "TestTestBundle"  and Enquiry is the name of the Entity name , which is save as a file name like  ""Enquiry.php""
+     
+     
+     Configuration format (yml, xml, php, or annotation) [annotation]:           // just enter it
+     
+     
+     after the 
+     
+     New field name (press <return> to stop adding fields): name   // put the field name 
+     Field type [string]: 
+	Field length [255]: 50
+		
+	New field name (press <return> to stop adding fields): description  // put the field name 
+	Field type [string]: text
+	
+	/* ------  all field name is done then enter ----------*/
+	
+	after that
+	
+   Do you want to generate an empty repository class [no]?    /////    just enter it
+   
+   Summary before generation   // you enter 
+   
+   Now, 
+   
+    You can now start using the generated code!  
+    
+    
+    /* ------------- crete the table  by command ------------    */
+    
+		ubc@ubc-System-Product-Name:/var/path/of/project
+		ubc@ubc-System-Product-Name:/var/www/project$ app/console doctrine:schema:create    //  put this code
+	   
+                        if not create then put this line
+                                       ubc@ubc-System-Product-Name:/var/www/project$       php app/console doctrine:schema:update --force 
+
+	   
+	   
+	   ********   database table successfully  **************
+	    Creating database schema...
+		Database schema created successfully!
+
+			/* ------------- Update  the table fields by command ------------    */
+		
+		     
+		ubc@ubc-System-Product-Name:/var/path/of/project
+		ubc@ubc-System-Product-Name:/project$ php app/console doctrine:update --force
+
+
+
+
+
+
+
+
+
+
+Creete entity ---- short cut method 
+
+
+
+
+   crete a file   into the entity folder    like   /var/www/symfony_project/src/Test/TestBundle/Entity/Askquestion.php                                
+
+Askquestion.php    into this file  copy and paste
+
+ and put the
+
+  <?php
+namespace Test\TestBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+/**
+* @ORM\Entity
+* @ORM\Table(name="askquestion")
+*/
+class Askquestion
+{
+/**
+* @ORM\Id
+* @ORM\Column(type="integer")
+* @ORM\GeneratedValue(strategy="AUTO")
+*/
+public $id;
+/**
+* @ORM\Column(type="integer")
+*/
+public $user_id;
+/**
+* @ORM\Column(type="string")
+*/
+public $title;
+/**
+* @ORM\Column(type="string")
+*/
+public $tags;
+/**
+* @ORM\Column(type="string")
+*/
+public $question;
+/**
+* @ORM\Column(type="datetime")
+*/
+public $datetime;
+
+}
+
+run this comand
+
+1:-     ubc@ubc-System-Product-Name:/var/www/symfony_project$ php app/console doctrine:generate:entities Test                                               // test is bundlename                                                     
+
+
+ 2:-    ubc@ubc-System-Product-Name:/var/www/symfony_project$    php app/console doctrine:schema:update --force                                                    //  create a table
+
+
+
