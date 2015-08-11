@@ -1,5 +1,8 @@
 Steps to Upload Data in Git hub
 git clone  https://github.com/bunkyboy/Symfony.git         after the go location $ cd Symfony  ----- after that pull
+
+git config --global push.default current
+
 git pull https://github.com/bunkyboy/Symfony.git
 git add --all(or you can give the simply filename or folder)
 git commit -m "all projects" (or use -m at place of a)
