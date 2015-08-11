@@ -1,0 +1,26 @@
+
+
+php /usr/bin/geany
+twig /usr/bin/geany
+. /usr/bin/geany
+ini /usr/bin/geany
+conf /usr/bin/geany
+js /usr/bin/geany
+js~ /usr/bin/geany
+cf /usr/bin/geany
+ext /usr/bin/geany
+log /usr/bin/geany
+/ /usr/bin/geany
+cnf /usr/bin/geany
+acl /usr/bin/geany
+local /usr/bin/geany
+default-zones /usr/bin/geany
+json /usr/bin/geany
+yml /usr/bin/geany
+php~ /usr/bin/gedit
+phtml /usr/bin/gedit
+twig /usr/bin/gedit
+
+
+
+"/home/ubc/.wine/drive_c/Program Files/Notepad++/notepad++.exe"
