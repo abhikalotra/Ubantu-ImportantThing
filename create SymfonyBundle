@@ -1,0 +1,43 @@
+Create Entities from Existing Database - Symfony
+
+Follow the steps below :-
+
+1. Create a directory 'doctrine' inside /src/SalonSolutions/WebBundle/Resources/Config/
+
+2. Run the following commands on terminal :-
+
+AdminBundle
+
+1) php app/console doctrine:mapping:import --force SalonSolutionAdminBundle xml
+
+2) php app/console doctrine:mapping:convert annotation ./src
+
+3) php app/console doctrine:generate:entities SalonSolutionAdminBundle
+
+
+WebBundle
+
+1) php app/console doctrine:mapping:import --force SalonSolutionWebBundle xml
+
+2) php app/console doctrine:mapping:convert annotation ./src
+
+3) php app/console doctrine:generate:entities SalonSolutionWebBundle
+
+
+SalonBundle
+
+1) php app/console doctrine:mapping:import --force SalonSolutionSalonBundle xml
+
+2) php app/console doctrine:mapping:convert annotation ./src
+
+3) php app/console doctrine:generate:entities SalonSolutionSalonBundle
+
+
+
+EmployeeBundle
+
+1) php app/console doctrine:mapping:import --force SalonSolutionEmployeeBundle xml
+
+2) php app/console doctrine:mapping:convert annotation ./src
+
+3) php app/console doctrine:generate:entities SalonSolutionEmployeeBundle
