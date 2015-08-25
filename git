@@ -4,6 +4,6 @@ git clone  https://github.com/bunkyboy/Symfony.git         after the go location
 git config --global push.default current
 
 git pull https://github.com/bunkyboy/Symfony.git
-git add --all(or you can give the simply filename or folder)
+git add --all                                               (or you can give the simply filename or folder)  donot write(into the content)
 git commit -m "all projects" (or use -m at place of a)
 git push -u origin master
