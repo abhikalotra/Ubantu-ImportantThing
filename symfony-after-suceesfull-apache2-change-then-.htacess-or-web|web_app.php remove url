@@ -1,0 +1,37 @@
+After the apache2 setup 
+
+the go to htacess 
+
+<IfModule mod_rewrite.c>
+
+#<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    #<IfModule mod_vhost_alias.c>
+      #RewriteBase web/
+    #</IfModule>
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ app_dev.php [QSA,L]
+#</IfModule>
+
+See image
+
+Inline image 1
+
+Replace /remove  the web folder  it means go to web folder and select all and  the  cut  and pase into the back (bahar ) where htacess is found 
+
+Inline image 3
+
+
+After that  path will be change into the   app_dev.php or app.php
+
+
+Inline image 5
+
+
+Inline image 4
+
+
+
+See what is the difference
