@@ -24,3 +24,27 @@ twig /usr/bin/gedit
 
 
 "/home/ubc/.wine/drive_c/Program Files/Notepad++/notepad++.exe"
+
+
+
+
+
+
+
+
+
+
+
+UPLOAD DATA BY COMMNDLINE FILE ZILA TO SERVER 
+
+
+<README.md> <username>@<Host>:<Dir Path>       
+like :-  
+dummy
+FTP/SSH
+Host: 149.134.334.3443
+username: root 
+pass: demo123
+Dir Path: /var/www/html
+example 
+scp Symfony.zip root@149.134.334.3443:/var/www/html
