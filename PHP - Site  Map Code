@@ -1,0 +1,43 @@
+
+
+************************** PHP SITE MAP ********************
+
+Link :- http://www.bin-co.com/php/programs/tools/sitemap_generator/
+
+
+Working of Google Sitemap Generator
+
+First, you have to edit the first few lines of the script to match the setting of your site. The comments explains what needs to be entered. Please note that you have to have a basic understanding of PHP to do this.
+
+After configuring, just run the file every time you make a change to your site. The script will automatically recreate the sitemap - with the new content included.
+
+Configuration
+
+These are the lines that must be edited...
+
+
+<?php
+$url = "http://www.bin-co.com/"; //The Url of the site - the last '/' is needed
+
+$root_dir = '../..'; //Where the root of the site is with relation to this file.
+
+$file_mask = '*.php'; //Or *.html or whatever - Any pattern that can be used in the glob() php function can be used here.
+
+//The file to which the result is written to - must be writable. The file name is relative from root.
+$sitemap_file = 'sitemap.xml'; 
+
+// Stuff to be ignored...
+//Ignore the file/folder if these words appear in the name
+$always_ignore = array(
+    'local_common.php','images'
+);
+
+//These files will not be linked in the sitemap.
+$ignore_files = array(
+    '404.php','error.php','configuration.php','include.inc'
+);
+
+//The script will not enter these folders
+$ignore_folders = array(
+    'Waste','php_uploads','images','includes','lib','js','css','styles','system','stats','CVS','.svn'
+); 
